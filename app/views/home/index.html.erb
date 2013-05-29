@@ -1,0 +1,28 @@
+<div class="DropdownMenu">
+    <h1>Welcome!</h1>
+    <% if user_signed_in? %>
+      <p>What would you like to do?</p>
+      <ul class="nav nav-pills nav-stacked">
+      <% if current_user.is_a?(Admin) %>
+            <li><%= link_to "Unconfirmed users", unconfirmed_users_path %></li>
+            <li><%= link_to "Associate clinic with doctor", clinic_doctors_path %></li>
+            <li><%= link_to "Patients", patients_path %></li>
+            <li><%= link_to "Doctors", doctors_path %></li>
+            <li><%= link_to "Clinics", clinics_path %></li>
+            <li><%= link_to "Work plans", work_plans_path %></li>
+            <li><%= link_to "Appointments", appointments_path %></li>
+      <% elsif current_user.is_a?(Patient) %>
+            <li><%= link_to "My appointments", appointments_path %></li>
+            <li><%= link_to "Available appointments", available_appointments_path %></li>
+            <li><%= link_to "First appointment in a clinic", first_clinic_appointments_path %></li>
+            <li><%= link_to "First appointment with a doctor", first_doctor_appointments_path %></li>
+            <li><%= link_to "Work plans", work_plans_path %></li>
+      <% elsif current_user.is_a?(Doctor) %>
+            <li><%= link_to "My appointments", appointments_path %></li>
+            <li><%= link_to "My work plan", doctor_work_plans_path %></li>
+      <% end %>
+      </ul>
+    <% else %>
+      <p>Please login/register.</p>
+    <% end %>
+</div>
