@@ -17,6 +17,7 @@ class AvailableAppointmentsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @available_appointments }
     end
+    expires_in 5.minutes, public: true
   end
   
   def appointments_for_date(date)

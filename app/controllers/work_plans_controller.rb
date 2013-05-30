@@ -9,6 +9,8 @@ class WorkPlansController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @work_plans }
     end
+
+    expires_in 5.minutes, public: true
   end
 
   # GET /work_plans/1
@@ -20,6 +22,8 @@ class WorkPlansController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @work_plan }
     end
+
+    expires_in 5.minutes, public: true
   end
 
   # GET /work_plans/new
