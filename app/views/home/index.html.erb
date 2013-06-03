@@ -4,6 +4,7 @@
       <p>What would you like to do?</p>
       <ul class="nav nav-pills nav-stacked">
       <% if current_user.is_a?(Admin) %>
+        <% cache "admin", expires_in: 5.minutes do %>
             <li><%= link_to "Unconfirmed users", unconfirmed_users_path %></li>
             <li><%= link_to "Associate clinic with doctor", clinic_doctors_path %></li>
             <li><%= link_to "Patients", patients_path %></li>
@@ -11,15 +12,20 @@
             <li><%= link_to "Clinics", clinics_path %></li>
             <li><%= link_to "Work plans", work_plans_path %></li>
             <li><%= link_to "Appointments", appointments_path %></li>
+        <% end %>
       <% elsif current_user.is_a?(Patient) %>
+        <% cache "patient", expires_in: 5.minutes do %>
             <li><%= link_to "My appointments", appointments_path %></li>
             <li><%= link_to "Available appointments", available_appointments_path %></li>
             <li><%= link_to "First appointment in a clinic", first_clinic_appointments_path %></li>
             <li><%= link_to "First appointment with a doctor", first_doctor_appointments_path %></li>
             <li><%= link_to "Work plans", work_plans_path %></li>
+        <% end %>
       <% elsif current_user.is_a?(Doctor) %>
+        <% cache "doctor", expires_in: 5.minutes do %>
             <li><%= link_to "My appointments", appointments_path %></li>
             <li><%= link_to "My work plan", doctor_work_plans_path %></li>
+        <% end %>
       <% end %>
       </ul>
     <% else %>

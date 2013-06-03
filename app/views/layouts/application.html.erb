@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="/assets/general-style.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,19 +59,22 @@
 
     <div class="container">
         <div class="row">
-          <div class="span9">
+          <div class="span9 container-width-overflow">
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
           <div class="span3">
             <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
+              <h3>PanHandle Health</h3>
+	      <img src="logo.jpg"/>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
                 <% if user_signed_in? %>
+                  <% cache "user_login", expires_in: 10.minutes do %>
                     <%= "Logged as #{current_user.type}" %>
                     <br>
                     <%= "Welcome, #{current_user.first_name}!" %>
+                  <% end %>
                 <% else %>
                     <%= "Welcome, stranger!" %>
                 <% end %>

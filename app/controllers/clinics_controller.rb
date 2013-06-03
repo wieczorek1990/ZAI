@@ -1,5 +1,7 @@
 class ClinicsController < ApplicationController
   load_and_authorize_resource
+  caches_action :index, :show
+
   # GET /clinics
   # GET /clinics.json
   def index
@@ -52,6 +54,10 @@ class ClinicsController < ApplicationController
         format.json { render json: @clinic.errors, status: :unprocessable_entity }
       end
     end
+
+    expire_action :index
+    expire_action :show
+
   end
 
   # PUT /clinics/1
@@ -68,6 +74,8 @@ class ClinicsController < ApplicationController
         format.json { render json: @clinic.errors, status: :unprocessable_entity }
       end
     end
+    expire_action :index
+    expire_action :show
   end
 
   # DELETE /clinics/1
@@ -80,5 +88,7 @@ class ClinicsController < ApplicationController
       format.html { redirect_to clinics_url }
       format.json { head :no_content }
     end
+    expire_action :index
+    expire_action :show
   end
 end

@@ -1,5 +1,7 @@
 class WorkPlansController < ApplicationController
   load_and_authorize_resource
+  caches_action :index, :show
+
   # GET /work_plans
   # GET /work_plans.json
   def index
@@ -53,6 +55,9 @@ class WorkPlansController < ApplicationController
         format.json { render json: @work_plan.errors, status: :unprocessable_entity }
       end
     end
+    expires_action :index
+    expires_action :show
+
   end
 
   # PUT /work_plans/1
@@ -69,6 +74,8 @@ class WorkPlansController < ApplicationController
         format.json { render json: @work_plan.errors, status: :unprocessable_entity }
       end
     end
+    expires_action :index
+    expires_action :show
   end
 
   # DELETE /work_plans/1
@@ -84,4 +91,6 @@ class WorkPlansController < ApplicationController
       format.json { head :no_content }
     end
   end
+    expires_action :index
+    expires_action :show
 end

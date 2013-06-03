@@ -25,3 +25,18 @@
 
 .headerMainWindow { position : relative; }
 .DropdownMenu ul li:hover a { color : #002a80 }
+
+.grid {
+background-color: #A0A0A0;
+font-size: 20px;
+color: BLUE;
+
+}
+
+.grid tr {
+width: 20px;
+}
+
+.grid-header {
+background-color: YELLOW;
+}
