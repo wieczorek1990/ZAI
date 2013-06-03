@@ -7,7 +7,7 @@
     <th>Start</th>
     <th>Stop</th>
     <th></th>
-    <th></th>
+    <th>Actions</th>
     <th></th>
   </tr>
 
@@ -17,13 +17,14 @@
     <td><%= format_days work_plan.day %></td>
     <td><%= format_hours work_plan.start %></td>
     <td><%= format_hours work_plan.stop %></td>
-    <td><%= link_to 'Show', work_plan %></td>
-    <td><%= link_to 'Edit', edit_work_plan_path(work_plan) %></td>
-    <td><%= link_to 'Destroy', work_plan, confirm: 'Are you sure?', method: :delete %></td>
+    <td><button text="Show"><%= link_to 'Show', work_plan %></button></td>
+    <td><button text="Edit"><%= link_to 'Edit', edit_work_plan_path(work_plan) %></button></td>
+    <td><button text="Destroy"><%= link_to 'Destroy', work_plan, confirm: 'Are you sure?', method: :delete %></button></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Work plan', new_work_plan_path %>
+<br />
+<button text="New Work plan">
+<%= link_to 'New Work plan', new_work_plan_path %></button><hr />

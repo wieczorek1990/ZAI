@@ -1,6 +1,6 @@
 <h1>Listing patients</h1>
 
-<table>
+<table class="grid">
   <tr>
     <th>Email</th>
     <th>First name</th>
@@ -10,7 +10,7 @@
     <th>Postal code</th>
     <th>City</th>
     <th></th>
-    <th></th>
+    <th>Actions</th>
     <th></th>
   </tr>
 
@@ -23,13 +23,17 @@
     <td><%= patient.address %></td>
     <td><%= patient.postal_code %></td>
     <td><%= patient.city %></td>
-    <td><%= link_to 'Show', patient %></td>
-    <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-    <td><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete %></td>
+    <td><button text="Show"><%= link_to 'Show', patient %></button></td>
+    <td><button text="Edit"><%= link_to 'Edit', edit_patient_path(patient) %></button></td>
+    <td><button text="Destroy"><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete %></button></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+<br />
 
+<button text="New Patient">
 <%= link_to 'New Patient', new_patient_path %>
+</button>
+<hr />
