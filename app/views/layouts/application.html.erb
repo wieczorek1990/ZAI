@@ -14,6 +14,7 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "bootstrap-datetimepicker.min" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -35,6 +36,15 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "jquery-1.8.3.min" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "bootstrap.min" %>
+    <%= javascript_include_tag "bootstrap-datetimepicker.min" %>
+
+
   <body>
 
     <div class="navbar navbar-fixed-top headerMainWindow" style="position : relative;" >
@@ -89,10 +99,6 @@
 
     </div> <!-- /container -->
 
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "application" %>
 
   </body>
 </html>
