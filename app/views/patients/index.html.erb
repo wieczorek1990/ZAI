@@ -23,9 +23,9 @@
     <td><%= patient.address %></td>
     <td><%= patient.postal_code %></td>
     <td><%= patient.city %></td>
-    <td><button text="Show"><%= link_to 'Show', patient %></button></td>
-    <td><button text="Edit"><%= link_to 'Edit', edit_patient_path(patient) %></button></td>
-    <td><button text="Destroy"><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete %></button></td>
+    <td><%= link_to 'Show', patient, class:"btn" %></td>
+    <td><%= link_to 'Edit', edit_patient_path(patient), class:"btn" %></td>
+    <td><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete , class:"btn"%></td>
   </tr>
 <% end %>
 </table>
@@ -33,7 +33,5 @@
 <br />
 <br />
 
-<button text="New Patient">
-<%= link_to 'New Patient', new_patient_path %>
-</button>
+<%= link_to 'New Patient', new_patient_path , class:"btn"%>
 <hr />

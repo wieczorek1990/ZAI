@@ -17,14 +17,13 @@
     <td><%= doctor.first_name %></td>
     <td><%= doctor.last_name %></td>
     <td><%= doctor.pzw %></td>
-    <td><button text="Show"><%= link_to 'Show', doctor %></button></td>
-    <td><button text="Edit"><%= link_to 'Edit', edit_doctor_path(doctor) %></button></td>
-    <td><button text="Destroy"><%= link_to 'Destroy', doctor, confirm: 'Are you sure?', method: :delete %></button></td>
+    <td><%= link_to 'Show', doctor, class:"btn" %></td>
+    <td><%= link_to 'Edit', edit_doctor_path(doctor) , class:"btn"%></td>
+    <td><%= link_to 'Destroy', doctor, confirm: 'Are you sure?', method: :delete , class:"btn"%></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 <br />
-<button text="New Doctor">
-<%= link_to 'New Doctor', new_doctor_path %></button> <hr />
+<%= link_to 'New Doctor', new_doctor_path, class:"btn" %> <hr />

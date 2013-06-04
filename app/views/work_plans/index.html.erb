@@ -21,10 +21,10 @@
     <td><%= format_days work_plan.day %></td>
     <td><%= format_hours work_plan.start.in_time_zone %></td>
     <td><%= format_hours work_plan.stop.in_time_zone %></td>
-    <td><button text="Show"><%= link_to 'Show', work_plan %></td>
+    <td><%= link_to 'Show', work_plan , class:"btn"%></td>
     <% unless current_user.is_a?(Patient) %></button>
-      <td><button text="Edit"><%= link_to 'Edit', edit_work_plan_path(work_plan) %></button></td>
-      <td><button text="Destroy"><%= link_to 'Destroy', work_plan, confirm: 'Are you sure?', method: :delete %></button></td>
+      <td><%= link_to 'Edit', edit_work_plan_path(work_plan) , class:"btn"%></td>
+      <td><%= link_to 'Destroy', work_plan, confirm: 'Are you sure?', method: :delete , class:"btn"%></td>
     <% end %>
   </tr>
 <% end %>
@@ -33,6 +33,6 @@
 <% unless current_user.is_a?(Patient) %>
 <br />
 <br />
-<button text="New Work plan">
-<%= link_to 'New Work plan', new_work_plan_path %></button><hr/>
+
+<%= link_to 'New Work plan', new_work_plan_path , class:"btn"%><hr/>
 <% end %>

@@ -9,14 +9,14 @@
 
 <% @admins.each do |admin| %>
   <tr>
-    <td><button text="Show"><%= link_to 'Show', admin %></button</td>
-    <td><button text="Edit"><%= link_to 'Edit', edit_admin_path(admin) %></button></td>
-    <td><button text="Destroy"><%= link_to 'Destroy', admin, confirm: 'Are you sure?', method: :delete %></button></td>
+    <td><%= link_to 'Show', admin, class:"btn" %></td>
+    <td><%= link_to 'Edit', edit_admin_path(admin), class:"btn" %></td>
+    <td><%= link_to 'Destroy', admin, confirm: 'Are you sure?', method: :delete , class:"btn"%></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 <br />
-<button text="New Admin">
-<%= link_to 'New Admin', new_admin_path %></button> <hr />
+
+<%= link_to 'New Admin', new_admin_path, class:"btn" %> <hr />
