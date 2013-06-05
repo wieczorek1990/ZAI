@@ -36,14 +36,6 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "jquery-1.8.3.min" %>
-    <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "bootstrap.min" %>
-    <%= javascript_include_tag "bootstrap-datetimepicker.min" %>
-
 
   <body>
 
@@ -78,7 +70,7 @@
               <h3>PanHandle Health</h3>
 	      <img src="logo.jpg"/>
               <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
+                <li class="nav-header">Information</li>
                 <% if user_signed_in? %>
                   <% cache "user_login", expires_in: 10.minutes do %>
                     <%= "Logged as #{current_user.type}" %>
@@ -101,4 +93,13 @@
 
 
   </body>
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "jquery-1.8.3.min" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "bootstrap.min" %>
+    <%= javascript_include_tag "bootstrap-datetimepicker.min" %>
+
 </html>
