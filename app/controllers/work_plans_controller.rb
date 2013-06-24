@@ -55,8 +55,8 @@ class WorkPlansController < ApplicationController
         format.json { render json: @work_plan.errors, status: :unprocessable_entity }
       end
     end
-    expires_action :index
-    expires_action :show
+    expire_action :index
+    expire_action :show
 
   end
 
@@ -74,8 +74,8 @@ class WorkPlansController < ApplicationController
         format.json { render json: @work_plan.errors, status: :unprocessable_entity }
       end
     end
-    expires_action :index
-    expires_action :show
+    expire_action :index
+    expire_action :show
   end
 
   # DELETE /work_plans/1
@@ -91,6 +91,6 @@ class WorkPlansController < ApplicationController
       format.json { head :no_content }
     end
   end
-    expires_action :index
-    expires_action :show
+    expire_action :index
+    expire_action :show
 end
