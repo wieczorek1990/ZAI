@@ -71,12 +71,10 @@
 	      <img src="logo.jpg"/>
               <ul class="nav nav-list">
                 <li class="nav-header">Information</li>
-                <% if user_signed_in? %>
-                  <% cache "user_login", expires_in: 10.minutes do %>
+                <% if user_signed_in? %>>
                     <%= "Logged as #{current_user.type}" %>
                     <br>
                     <%= "Welcome, #{current_user.first_name}!" %>
-                  <% end %>
                 <% else %>
                     <%= "Welcome, stranger!" %>
                 <% end %>

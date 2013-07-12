@@ -6,10 +6,10 @@ Projekt::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
   
-  config.perform_caching = true
-  config.action_controller.perform_caching = true
+  #config.perform_caching = true
+  config.action_controller.perform_caching = false
 
-  config.cache_store = :dalli_store
+  #config.cache_store = :dalli_store
   #config.session_store :dalli_store, :memcache_server => ['host1', 'host2'], :namespace => 'sessions', :key => '_foundation_session', :expire_after => 20.minutes
 
   # Log error messages when you accidentally call methods on nil.

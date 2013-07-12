@@ -12,7 +12,6 @@
   </tr>
 
 <% last = nil %>
-<% cache available_appointments_path, expires_in: 30.minutes do %>
 <% @available_appointments.each do |appointment| %>
   <% current = appointment[AvailableAppointmentsHelper::APPOINTMENT] %>
   <% available = appointment[AvailableAppointmentsHelper::AVAILABLE] %>
@@ -65,6 +64,5 @@
   </tr>
   
   <% last = current %>
-<% end %>
 <% end %>
 </table>

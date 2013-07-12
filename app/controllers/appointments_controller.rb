@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   load_and_authorize_resource
-  caches_action :index, :show
+  #caches_action :index, :show
 
   # GET /appointments
   # GET /appointments.json
@@ -53,8 +53,8 @@ class AppointmentsController < ApplicationController
     params[:appointment][:patient_id] = current_user.id
     @appointment = Appointment.new(params[:appointment])
     
-    expire_action appointments_path
-    expire_fragment available_appointments_path
+    #expire_action appointments_path
+    #expire_fragment available_appointments_path
     
     create_respond_to(@appointment)
   end
@@ -75,8 +75,8 @@ class AppointmentsController < ApplicationController
   # PUT /appointments/1.json
   def update
     @appointment = Appointment.find(params[:id])
-    expire_action appointments_path
-    expire_action appointment_path(@appointment)
+    #expire_action appointments_path
+    #expire_action appointment_path(@appointment)
 
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
@@ -93,15 +93,15 @@ class AppointmentsController < ApplicationController
   # DELETE /appointments/1.json
   def destroy
     @appointment = Appointment.find(params[:id])
-    expire_action appointments_path
-    expire_action appointment_path(@appointment)
+    #expire_action appointments_path
+    #expire_action appointment_path(@appointment)
     @appointment.destroy
 
     respond_to do |format|
       format.html { redirect_to appointments_url }
       format.json { head :no_content }
     end
-    expire_fragment available_appointments_path
+    #expire_fragment available_appointments_path
   end
     
   def confirm 
