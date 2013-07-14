@@ -3,11 +3,11 @@ class AddTestAppointments < ActiveRecord::Migration
     a = Appointment.new
     a.clinic_doctor_id = ClinicDoctor.find(1).id
     a.patient_id = Patient.first.id
-    a.date = Date.new(2012, 6, 17)
+    a.date = Date.new(2014, 1, 1)
     t = DateTime.new(0)
     a.start = t + 8.hours
     a.stop = t + 30.minutes
-    a.save(:validate => false)
+    a.save!
   end
 
   def down
