@@ -23,7 +23,9 @@ class Appointment < ActiveRecord::Base
   before_validation :set_stop
   before_create :set_stop
   before_update :set_stop
-  
+
+  before_validation :fix_date
+
   def confirm!
     if !confirmed? && can_confirm?
       self.confirmed_at = DateTime.now
@@ -77,5 +79,10 @@ class Appointment < ActiveRecord::Base
     # Czy potwierdzalny?
     def confirmable
       errors.add(:confirmed_at, "must be set within 10 minutes after appointment creation") if !can_confirm?
+    end
+
+    def fix_date
+      self.start = self.start.change(:year => 2000)
+      self.stop = self.stop.change(:year => 2000)
     end
 end
