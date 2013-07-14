@@ -60,19 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appointment.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="appointment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="41" selection-start="2563" selection-end="2563" vertical-scroll-proportion="1.9555556">
+            <state line="88" column="41" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20120527145254_add_test_appointments.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="20120527145254_add_test_appointments.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20120527145254_add_test_appointments.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="32" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+            <state line="3" column="44" selection-start="130" selection-end="130" vertical-scroll-proportion="0.06540698">
               <folding />
             </state>
           </provider>
@@ -657,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120526193526_add_test_work_plans.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="175" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/work_plan.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="729" selection-end="855" vertical-scroll-proportion="0.0">
@@ -671,16 +664,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120527145254_add_test_appointments.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120526193526_add_test_work_plans.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="32" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+        <state line="8" column="18" selection-start="175" selection-end="223" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="41" selection-start="2563" selection-end="2563" vertical-scroll-proportion="1.9555556">
+        <state line="88" column="41" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120527145254_add_test_appointments.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="44" selection-start="130" selection-end="130" vertical-scroll-proportion="0.06540698">
           <folding />
         </state>
       </provider>

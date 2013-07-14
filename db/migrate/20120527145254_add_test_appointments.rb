@@ -1,7 +1,7 @@
 class AddTestAppointments < ActiveRecord::Migration
   def up 
     a = Appointment.new
-    a.clinic_doctor_id = ClinicDoctor.find(1).id
+    a.clinic_doctor_id = ClinicDoctor.find(2).id
     a.patient_id = Patient.first.id
     a.date = Date.new(2014, 1, 1)
     t = DateTime.new(0)
