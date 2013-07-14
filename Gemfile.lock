@@ -50,7 +50,6 @@ GEM
     commonjs (0.2.6)
     daemon_controller (1.1.4)
     daemons (1.1.9)
-    dalli (2.0.5)
     database_cleaner (1.0.1)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
@@ -187,7 +186,6 @@ DEPENDENCIES
   cancan
   capybara
   coffee-rails (~> 3.2.1)
-  dalli
   database_cleaner
   devise
   execjs
