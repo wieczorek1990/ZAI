@@ -17,7 +17,7 @@
             <li><%= link_to "First appointment in a clinic", first_clinic_appointments_path %></li>
             <li><%= link_to "First appointment with a doctor", first_doctor_appointments_path %></li>
             <li><%= link_to "Work plans", work_plans_path %></li>
-      <% elsif current_user.is_a?(Doctor) %>-->
+      <% elsif current_user.is_a?(Doctor) %>
             <li><%= link_to "My appointments", appointments_path %></li>
             <li><%= link_to "My work plan", doctor_work_plans_path %></li>
       <% end %>
