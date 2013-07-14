@@ -9,7 +9,7 @@
     <file path="/schema.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1365621922675" ignored="false" />
     <file path="/appointment.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1365621777121" ignored="false" />
     <file path="/temp.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1365621889471" ignored="false" />
-    <file path="/work_plan.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1373819603567" ignored="false" />
+    <file path="/work_plan.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1373820249433" ignored="false" />
     <file path="/20120527145254_add_test_appointments.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1365622107391" ignored="false" />
     <file path="/20120519154341_create_work_plans.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1365622636574" ignored="false" />
     <file path="/20120519153859_create_appointments.rb" changelist="93b7a388-6494-4588-a1fa-458c1d3fdcf8" time="1365622643151" ignored="false" />
@@ -45,7 +45,16 @@
       <file leaf-file-name="work_plan.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/work_plan.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="2" selection-start="235" selection-end="235" vertical-scroll-proportion="0.21428572">
+            <state line="24" column="40" selection-start="832" selection-end="832" vertical-scroll-proportion="0.51428574">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20120526193526_add_test_work_plans.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20120526193526_add_test_work_plans.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="18" selection-start="175" selection-end="223" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,8 +93,8 @@
         <option value="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/appointments/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/work_plan.rb" />
         <option value="$PROJECT_DIR$/app/models/appointment.rb" />
+        <option value="$PROJECT_DIR$/app/models/work_plan.rb" />
       </list>
     </option>
   </component>
@@ -632,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120526193526_add_test_work_plans.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="175" selection-end="223" vertical-scroll-proportion="0.16830294">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="2" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
@@ -646,9 +648,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120526193526_add_test_work_plans.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="175" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/work_plan.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="235" selection-end="235" vertical-scroll-proportion="0.21428572">
+        <state line="24" column="40" selection-start="832" selection-end="832" vertical-scroll-proportion="0.51428574">
           <folding />
         </state>
       </provider>

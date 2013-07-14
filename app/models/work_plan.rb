@@ -21,7 +21,7 @@ class WorkPlan < ActiveRecord::Base
     end
 
     def fix_date
-      self.start = 2000
-      self.stop = 2000
+      self.start = self.start.change(:year => 2000)
+      self.stop = self.stop.change(:year => 2000)
     end
 end
