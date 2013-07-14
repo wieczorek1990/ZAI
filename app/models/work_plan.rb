@@ -9,7 +9,7 @@ class WorkPlan < ActiveRecord::Base
   validate :start_stop
   validate :bilocation
 
-  before_save :fix_date
+  before_validation :fix_date
 
   private
     def start_stop
