@@ -30,7 +30,7 @@ class AvailableAppointmentsController < ApplicationController
       if Date.today.wday == wday
         now = DateTime.now
         now.min > 30 ? now = now.change(:hour => now.hour + 1) : now = now.change(:min => 30)
-        start = DateTime.new(0)
+        start = DateTime.new(2000)
         start += now.hour.hours + now.min.minutes
       end
       while start <= stop_ - 30.minutes
