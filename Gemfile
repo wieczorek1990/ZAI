@@ -65,4 +65,4 @@ end
 
 gem 'multi_json', '1.7.2'
 gem 'libv8', '3.11.8.17'
-gem 'passenger', '4.0.3'
+gem 'passenger', '5.3.2'
